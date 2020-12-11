@@ -1,6 +1,6 @@
 #a
 CREATE TABLE Store (
-	`order_no` INTEGER PRIMARY KEY AUTO_INCREMENT,
+    `order_no` INTEGER PRIMARY KEY AUTO_INCREMENT,
     `code` VARCHAR(20) NOT NULL,
     `item` VARCHAR(30) NOT NULL,
     `quantity` INTEGER DEFAULT 1,
@@ -23,6 +23,9 @@ CREATE VIEW CART AS
 SELECT `item`, `quantity` FROM Store;
 
 #e
+INSERT INTO Store (`code`, `item`, `quantity`, `price`, `discount`, `mrp`) 
+VALUES ("GLD", "GOLD", 10, 5000, 0, 5000);
+
 SELECT * FROM CART;
 
 #f
